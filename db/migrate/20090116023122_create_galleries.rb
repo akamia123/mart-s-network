@@ -3,7 +3,9 @@ class CreateGalleries < ActiveRecord::Migration
     create_table :galleries do |t|
       t.belongs_to  :user
       t.string      :name
-      t.boolean     :
+      t.string      :description
+      t.boolean     :visible, :default => true
+      t.boolean     :friends_only, :default => false
       t.timestamps
     end
   end

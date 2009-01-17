@@ -4,7 +4,8 @@ class CreatePosts < ActiveRecord::Migration
       t.belongs_to    :user
       t.string        :title
       t.text          :body
-      t.boolean       :commentable
+      t.boolean       :commentable, :default => true
+      t.boolean       :friends_only, :default => false
       t.timestamps
     end
   end
